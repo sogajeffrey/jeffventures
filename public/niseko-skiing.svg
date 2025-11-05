@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" role="img" aria-label="Snowy mountain landscape illustration">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#bfe6ff" />
+      <stop offset="60%" stop-color="#e6f6ff" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+
+    <linearGradient id="mountNear" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#9bb0c9" />
+      <stop offset="100%" stop-color="#6d83a0" />
+    </linearGradient>
+
+    <linearGradient id="mountFar" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d0e6f6" />
+      <stop offset="100%" stop-color="#9fbdd6" />
+    </linearGradient>
+
+    <linearGradient id="snowGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f6fbff" />
+    </linearGradient>
+
+    <filter id="shadowBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feOffset dx="0" dy="6" />
+      <feMerge><feMergeNode in="blur" /></feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="g" />
+      <feBlend in="SourceGraphic" in2="g" mode="normal" />
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="1600" height="800" fill="url(#skyGrad)" />
+
+  <!-- Far mountains (soft, bluish) -->
+  <g opacity="0.95" transform="translate(0,40)">
+    <path d="M0 560 L200 380 L420 560 Z" fill="url(#mountFar)" />
+    <path d="M300 560 L600 300 L940 560 Z" fill="url(#mountFar)" />
+    <path d="M800 560 L1100 260 L1450 560 Z" fill="url(#mountFar)" />
+  </g>
+
+  <!-- Mid mountains with more detail -->
+  <g transform="translate(0,90)">
+    <path d="M0 560 L250 320 L480 560 Z" fill="url(#mountNear)" />
+    <path d="M420 560 L720 260 L980 560 Z" fill="url(#mountNear)" />
+    <path d="M880 560 L1180 220 L1600 560 Z" fill="url(#mountNear)" />
+
+    <!-- snowcaps subtle highlights -->
+    <path d="M240 318 L260 280 L290 305 L250 292 Z" fill="#fff" opacity="0.9" />
+    <path d="M720 260 L760 220 L800 250 L760 235 Z" fill="#fff" opacity="0.95" />
+    <path d="M1180 220 L1210 190 L1240 220 L1210 205 Z" fill="#fff" opacity="0.95" />
+  </g>
+
+  <!-- Foreground slope with texture -->
+  <g>
+    <path d="M0 560 C250 460 500 420 800 440 C1100 460 1350 540 1600 520 L1600 800 L0 800 Z" fill="url(#snowGrad)" />
+
+    <!-- subtle slope shading -->
+    <path d="M0 560 C250 480 500 440 800 460 C1100 480 1350 540 1600 520 L1600 560 L0 560 Z" fill="#eef7ff" opacity="0.6" />
+
+    <!-- textured snow strokes -->
+    <g stroke="#f2f7fb" stroke-width="2" opacity="0.7" stroke-linecap="round">
+      <path d="M120 620 C220 580 360 560 520 580" fill="none" />
+      <path d="M300 660 C420 620 620 600 800 620" fill="none" />
+      <path d="M700 640 C860 612 1050 620 1280 640" fill="none" />
+    </g>
+  </g>
+
+  <!-- Trees in foreground for depth -->
+  <g transform="translate(40,420) scale(0.9)">
+    <g fill="#0f2a13">
+      <path d="M60 80 L90 20 L120 80 Z" opacity="0.95" />
+      <path d="M140 80 L170 10 L200 80 Z" opacity="0.95" />
+      <path d="M1020 80 L1050 20 L1080 80 Z" opacity="0.95" />
+    </g>
+  </g>
+
+  <!-- Ski tracks (more natural) -->
+  <path d="M240 640 C360 600 460 560 620 580 C760 600 900 640 1180 600" fill="none" stroke="#dfeefb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.95" />
+  <path d="M260 650 C380 610 480 570 640 590 C780 610 920 650 1200 610" fill="none" stroke="#cfe8fb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+
+  <!-- Person removed: leaving landscape only -->
+
+  <!-- Falling snow: varied sizes for realism -->
+  <g fill="#fff" opacity="0.95">
+    <circle cx="140" cy="120" r="2.2" />
+    <circle cx="220" cy="80" r="1.6" />
+    <circle cx="980" cy="140" r="2.4" />
+    <circle cx="640" cy="90" r="1.8" />
+    <circle cx="420" cy="210" r="1.4" />
+    <circle cx="1020" cy="220" r="2.0" />
+    <circle cx="760" cy="130" r="1.6" />
+    <circle cx="300" cy="200" r="1.2" />
+  </g>
+
+  <!-- Caption removed -->
+</svg>

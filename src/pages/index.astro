@@ -13,24 +13,52 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Hello! and Welcome to Jeff Ventures</h1>
-			<p>
-				This site is currently under contruction
-			</p>
-			<p>
-				Check out the youtube channel <a href="https://www.youtube.com/channel/UCDX2boAuwFDbHRpfBJXV_Vg">here!</a> 
-			</p>
-			<p>Under Construction</p>
-			<ul>
-				Under Construction
-			</ul>
-			<p>
-				Under Construction
-			</p>
-			<p>
-				Under Construction
-			</p>
+			<section>
+				<div class="prose">
+					<h1>Jeff Ventures</h1>
+					<p>
+						I help busy people and property owners save time and avoid feeling overwhelmed. My services
+						focus on travel planning and organizing, as well as property management and remodeling
+						project planning.
+					</p>
+
+					<h2>What I offer</h2>
+					<ul>
+						<li>
+							<strong>Travel planning and organizing</strong> — end-to-end trip planning,
+							itinerary building, booking coordination, budgeting, and logistics for leisure
+							and small-group travel.
+						</li>
+						<li>
+							<strong>Property management</strong> — tenant communication, maintenance
+							coordination, vendor sourcing, and routine property operations to protect your
+							investment.
+						</li>
+						<li>
+							<strong>Remodeling project planning</strong> — scope and timeline development,
+							budget estimates, contractor selection guidance, and project scheduling to keep
+							remodels on track.
+						</li>
+						</ul>
+
+					<h2>How I work</h2>
+					<p>
+						I start with a short discovery conversation to understand goals and constraints. Then I deliver a clear plan you can act on (itinerary, property operations checklist, or
+						remodel roadmap). Projects can be delivered as one-off plans or as ongoing
+						support and coordination.
+					</p>
+
+						<p>
+							Learn more on the <a href="/about">About</a> page to see examples and recent projects.
+						</p>
+				</div>
+				</section>
 		</main>
 		<Footer />
+
+		<style>
+			/* center main content similar to BlogPost */
+			.prose{ width:720px; max-width:calc(100% - 2em); margin:auto; padding:1em; color: rgb(var(--gray-dark)); }
+		</style>
 	</body>
 </html>
